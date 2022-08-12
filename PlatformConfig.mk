@@ -22,9 +22,9 @@ BOARD_DTB_OFFSET         := 0x01f00000
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 
 ifeq ($(PRODUCT_USE_DYNAMIC_PARTITIONS), true)
-TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab_dynamic.qcom
+TARGET_RECOVERY_FSTAB := $(MOTOROLA_ROOT)/vendor/etc/fstab_dynamic.qcom
 else
-TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(MOTOROLA_ROOT)/vendor/etc/fstab.qcom
 endif
 
 # Kernel
