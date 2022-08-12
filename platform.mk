@@ -138,7 +138,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Init
 PRODUCT_COPY_FILES += \
-    device/qcom/common/vendor/init/sm6150/bin/init.kernel.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot.sh
+    device/qcom/common/vendor/init/holi/bin/init.kernel.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot.sh
 
 PRODUCT_SOONG_NAMESPACES += device/qcom/common/vendor/init
 

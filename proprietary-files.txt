@@ -1,4 +1,4 @@
-# These files are from S0RCS32.41-10-9-2 unless specified otherwise
+# These files are from S2RI32.32-20-7 unless specified otherwise
 
 # ACDB Loader
 vendor/lib/libacdb-fts.so
