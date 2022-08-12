@@ -36,6 +36,10 @@ static inline const char* getBTDefaultName()
         return "moto g60";
     }
 
+    if (!strcmp("parker", device)) {
+        return "Moto One Zoom";
+    }
+
     if (!strcmp("odessa", device)) {
         return "moto g9 plus";
     }
