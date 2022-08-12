@@ -34,12 +34,12 @@ DEVICE_PACKAGE_OVERLAYS += \
 # BT definitions for Qualcomm solution
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_COMMON_PATH)/bluetooth
 
-# Dynamic Partitions: Enable DP
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
+ifeq ($(filter %_foles %_parker,$(TARGET_PRODUCT)),)
+$(call inherit-product, device/motorola/sm6150-common/common_dynamic.mk)
+endif
 
 # A/B support
 AB_OTA_UPDATER := true
-PRODUCT_SHIPPING_API_LEVEL := 29
 
 # A/B OTA dexopt package
 PRODUCT_PACKAGES += \
@@ -64,15 +64,9 @@ PRODUCT_PACKAGES += \
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
-    product \
     system \
     vendor \
-    vbmeta \
-    vbmeta_system
-
-# Dynamic Partitions: build fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
+    vbmeta
 
 # Treble
 # Include vndk/vndk-sp/ll-ndk modules
@@ -120,7 +114,6 @@ PRODUCT_PACKAGES += \
 # hardware.ssc.so links against display mappers, of which
 # the interface libraries are explicitly included here:
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor
 
