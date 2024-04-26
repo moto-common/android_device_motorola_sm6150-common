@@ -13,8 +13,12 @@
 # limitations under the License.
 
 # Arch
-TARGET_ARCH_VARIANT := armv8-a
-TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_ARCH_VARIANT := armv8-2a
+TARGET_CPU_VARIANT := cortex-a75
+TARGET_CPU_VARIANT_RUNTIME := cortex-a75
+TARGET_2ND_ARCH_VARIANT := armv8-2a
+TARGET_2ND_CPU_VARIANT := cortex-a55
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # AVB
 BOARD_AVB_ENABLE := true
